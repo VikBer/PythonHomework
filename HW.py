@@ -4,21 +4,16 @@ restart = True
 while restart :
     restart = False
     x = int(input(f'Введите координату точки Х: '))
-    if x == 0: 
-        print("Введите число отличное от нуля")
-        restart = True
-        continue 
-
-restart = True
-while restart :
-    restart = False
     y = int(input(f'Введите координату точки Y: '))
-    if y == 0: 
-        print("Введите число отличное от нуля")
+    if x == 0 and y == 0: 
+        print("Обе координаты не могут быть нулем, только одно. Введите корректные значения")
         restart = True
         continue 
 
 if x > 0 and y > 0: print(f"X = {x}, Y = {y} это 1 четверть")
 if x < 0 and y > 0: print(f"X = {x}, Y = {y} это 2 четверть")
 if x < 0 and y < 0: print(f"X = {x}, Y = {y} это 3 четверть")
-if x > 0 and y < 0: print(f"X = {x}, Y = {y} это 3 четверть")
+if x > 0 and y < 0: print(f"X = {x}, Y = {y} это 4 четверть")
+
+if x == 0 : print(f"X = {x}, Y = {y} - точка лежит на оси Х")
+if y == 0 : print(f"X = {x}, Y = {y} - точка лежит на оси Y")
