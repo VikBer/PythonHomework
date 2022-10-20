@@ -1,14 +1,8 @@
 # Семинар 2:
-# git checkout Sem2Task4 - Задача 4 - Задайте число N и создайте список, заполненный числами из промежутка [-N, N]. 
-# Найдите произведение элементов на указанных позициях. Позиции хранятся в файле file.txt в одной строке одно число.
+# git checkout Sem2Task5 - Задача 5 - Реализуйте алгоритм перемешивания списка.(Без использования библиотеки random)
+import os
+list = [0,1,2,3,4,5,6,7,8,9]
+print ("Начальный список: " + str(list))
+lst2 = sorted(list, key=os.urandom)
+print ("Перемешанный список: " + str(lst2))
 
-
-
-
-n = int(input("Введите число n \n"))
-lst = [i for i in range(-n, n)]
-print(lst)
-
-file = open('file.txt', 'r')
-res = lst[int(file.readline())]*lst[int(file.readline(2))]*lst[int(file.readline(3))]*lst[int(file.readline(4))]
-print(res)
